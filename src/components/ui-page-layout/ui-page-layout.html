@@ -1,0 +1,37 @@
+<script props>
+  module.exports = {};
+</script>
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="width" />
+
+    <stack name="meta"></stack>
+
+    <link rel="icon" href="/src/assets/favicon.ico" type="image/x-icon" />
+
+    <stack name="styles"></stack>
+  </head>
+
+  <body>
+    <div class="page-layout">
+      <slot:header></slot:header>
+
+      <main class="page-layout__main">
+        <slot></slot>
+      </main>
+
+      <slot:footer></slot:footer>
+    </div>
+
+    <stack name="modals"></stack>
+
+    <stack name="scripts"></stack>
+  </body>
+</html>

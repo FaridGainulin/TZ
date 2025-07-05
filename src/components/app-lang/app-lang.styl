@@ -1,0 +1,36 @@
+.app-lang
+  display flex
+  align-items center
+  gap 6px
+  font-size 14px
+
+  +above($breakpoints.lg)
+    font-size 16px
+
+  &__icon
+    width 14px
+    height 14px
+    color #999C9F
+
+    +above($breakpoints.lg)
+      width 24px
+      height 24px
+
+  &__items
+    display flex
+    align-items center
+    gap 4px
+
+  &__link
+    color #B7B9BB
+
+    &--active
+      color $color-dark
+      pointer-events none
+
+  &__divider
+    display block
+    flex-shrink 0
+    width 1px
+    height 12px
+    background-color $color-dark

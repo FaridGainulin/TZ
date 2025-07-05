@@ -1,0 +1,44 @@
+<script props>
+  module.exports = {
+    items: [
+      {
+        title: 'Каталог',
+        icon: 'menu',
+      },
+      {
+        title: 'Акции',
+        icon: 'fire',
+      },
+      {
+        title: 'Горячее предложение',
+        icon: 'shtorm',
+      },
+      {
+        title: 'Подарочные наборы',
+        icon: 'chest',
+      },
+      {
+        title: 'События',
+        icon: 'quest',
+      },
+      {
+        title: 'Наши бренды',
+        icon: 'ork',
+      },
+    ],
+  };
+</script>
+
+<nav class="app-menu-mobile">
+  <ul class="app-menu-mobile__list">
+    <each loop="item in items">
+      <li class="app-menu-mobile__item">
+        <a href="#" class="app-menu-mobile__link">
+          <span class="app-menu-mobile__icon"> <{{`x-icon-${item.icon}`}} /> </span>
+          {{item.title}}
+          <x-icon-arrow-right class="app-menu-mobile__arrow"></x-icon-arrow-right>
+        </a>
+      </li>
+    </each>
+  </ul>
+</nav>

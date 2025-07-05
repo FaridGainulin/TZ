@@ -1,0 +1,13 @@
+<script props>
+  module.exports = {
+    tag: props.tag || 'button',
+    iconOnlyClass: props['icon-only'] ? 'ui-button--icon-only' : '',
+    outlinedClass: props.outlined ? 'ui-button--outlined' : '',
+    primaryClass: props.primary ? 'ui-button--primary' : '',
+    primaryHoverClass: props['primary-hover'] ? 'ui-button--primary-hover' : '',
+  };
+</script>
+
+<{{tag}} class="ui-button {{iconOnlyClass}} {{outlinedClass}} {{primaryClass}} {{primaryHoverClass}}">
+  <slot></slot>
+</{{tag}}>

@@ -1,0 +1,96 @@
+.app-header-desktop
+  display none
+  background-color $color-white
+
+  +above($breakpoints.lg)
+    display block
+
+  &__bar-wrapper
+    display flex
+    align-items center
+    justify-content space-between
+
+  &__bar
+    background-color $color-secondary
+    padding 8px 0
+
+  &__info
+    display flex
+    gap 12px
+
+  &__links
+    list-style none
+    display flex
+    gap 16px
+
+  &__wrapper
+    padding-top 16px
+    display flex
+    gap 35px
+
+  &__logo
+    display block
+
+  &__container
+    position relative
+    padding-bottom 24px
+    flex 1
+    display flex
+    flex-direction column
+    gap 16px
+
+  &__row
+    display flex
+    align-items center
+    justify-content space-between
+
+  &__navigate
+    display flex
+
+  &__dropdown
+    opacity 0
+    visibility hidden
+    transform scale(0.95)
+    width 892px
+    padding 30px 0 23px
+    position absolute
+    top 100%
+    left 0
+    background-color $color-white
+    border-radius 8px
+    box-shadow 0 0 10px rgba(157, 157, 157, 0.35)
+    transition all $transition-time
+
+    &--show
+      opacity 1
+      visibility visible
+      transform scale(1)
+
+  &__search
+    width 654px
+    margin-left 16px
+    margin-right 24px
+
+  &__social
+    display flex
+    gap 10px
+
+  &__additional
+    display flex
+    gap 16px
+
+  &__menu
+    list-style none
+    display flex
+    gap 27px
+
+  &__action
+    & .ui-button
+      width 176px
+      gap 7px
+      padding-left 6px
+      padding-right 6px
+
+      & svg
+        width 16px
+        height 16px

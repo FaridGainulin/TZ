@@ -1,0 +1,41 @@
+.app-search
+  position relative
+
+  &__button
+    display flex
+    align-items center
+    height 100%
+    position absolute
+    top 0
+    right 4px
+
+    & .ui-button
+      padding 0
+      font-size 14px
+      width 40px
+      height 40px
+      justify-content center
+
+      +above($breakpoints.lg)
+        padding 11px 20px
+        width auto
+        height auto
+
+  &__input
+    & .ui-input
+      padding-right 50px
+
+      +above($breakpoints.lg)
+        padding-right 100px
+
+  &__label
+    display none
+
+    +above($breakpoints.lg)
+      display block
+
+  &__icon
+    display block
+
+    +above($breakpoints.lg)
+      display none

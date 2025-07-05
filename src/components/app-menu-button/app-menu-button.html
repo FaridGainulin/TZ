@@ -1,0 +1,13 @@
+<script props>
+  module.exports = {
+    class: props.class || '',
+  };
+</script>
+
+<x-ui-button class="app-menu-button {{class}}" primary="true" aria-label="menu-button">
+  <span class="app-menu-button__inner">
+    <span class="app-menu-button__line app-menu-button__line--1"></span>
+    <span class="app-menu-button__line app-menu-button__line--2"></span>
+    <span class="app-menu-button__line app-menu-button__line--3"></span>
+  </span>
+</x-ui-button>

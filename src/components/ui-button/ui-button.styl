@@ -1,0 +1,83 @@
+.ui-button
+  display inline-flex
+  align-items center
+  gap 10px
+  font-family $primary-font-family
+  background-color $color-secondary
+  font-size 16px
+  padding 11px 16px
+  border-radius 8px
+  border none
+  color $color-dark
+  cursor pointer
+  transition all $transition-time
+
+  & svg
+    width 20px
+    height 20px
+    color $color-primary
+    opacity 0.5
+    transition opacity $transition-time
+    flex-shrink 0
+
+  &:active
+    transform translateY(-2px)
+
+  &:hover
+    color $color-primary
+
+    & svg
+      opacity 1
+
+  &--icon-only
+    padding 0
+    width 40px
+    height 40px
+    justify-content center
+
+    +above($breakpoints.lg)
+      width 48px
+      height 48px
+
+    & svg
+      width 20px
+      height 20px
+      opacity 1
+      color inherit
+
+      +above($breakpoints.lg)
+        width 24px
+        height 24px
+
+    &:hover
+      background-color $color-grey
+
+  &--outlined
+    border 1px solid $color-accent
+    background-color transparent
+
+    &:hover
+      background-color transparent
+      border-color $color-purple-light
+
+  &--primary
+    background-color $color-primary
+    color $color-white
+
+    & svg
+      color inherit
+      opacity 1
+
+    &:hover
+      color $color-white
+
+  &--primary-hover
+    color $color-primary
+
+    & svg
+      color inherit
+      opacity 1
+
+    &:hover
+      color $color-white
+      background-color $color-primary

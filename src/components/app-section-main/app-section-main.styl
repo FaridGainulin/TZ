@@ -1,0 +1,41 @@
+.app-section-main
+  background linear-gradient(to right, rgba(103, 40, 112, 0.9) 10%, #4aa5b9 100%)
+  color $color-white
+
+  +above($breakpoints.lg)
+    background linear-gradient(to right, #672870 20%, #4FE0FF 100%)
+
+  &__inner
+    padding-top 32px
+    padding-bottom 222px
+    background-image url('/src/images/gamepad.webp')
+    background-repeat no-repeat
+    background-position calc(100% + 215px) 270px
+    background-size 397px
+
+    +above($breakpoints.lg)
+      padding-top 84px
+      padding-bottom 60px
+      background-size auto
+      background-position calc(50% + 534px) calc(50% + 52px)
+      background-size 767px
+
+  &__content
+    display flex
+    flex-direction column
+    gap 26px
+    max-width 640px
+    font-family $secondary-font-family
+    font-size 14px
+    line-height 19px
+    font-weight 100
+
+    +above($breakpoints.lg)
+      font-size 18px
+      line-height 24px
+
+  &__button
+    .ui-button
+      padding 16px 40px
+      background-color $color-white
+      color $color-purple

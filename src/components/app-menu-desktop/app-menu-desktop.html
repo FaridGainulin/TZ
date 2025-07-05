@@ -1,0 +1,104 @@
+<script props>
+  module.exports = {
+    items: [
+      {
+        title: 'Смартфоны и гаджеты',
+        icon: 'gadget',
+        children: [
+          {
+            title: 'Смартфоны',
+            count: 123,
+            children: [
+              {
+                title: 'iPhone 16',
+                count: 120,
+              },
+              {
+                title: 'Складные',
+                count: 30,
+              },
+              {
+                title: 'Huawei Mate X6',
+                count: 100,
+              },
+              {
+                title: 'Кнопочные',
+                count: 23,
+              },
+              {
+                title: 'Samsung',
+                count: 27,
+              },
+            ],
+          },
+          {
+            title: 'Гаджеты',
+            count: 56,
+            children: [
+              {
+                title: 'Смарт-часы',
+                count: 15,
+              },
+              {
+                title: 'Смарт-кольца',
+                count: 34,
+              },
+              {
+                title: 'Наушники',
+                count: 21,
+              },
+              {
+                title: 'Гарнитуры',
+                count: 27,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Ноутбуки и компьютеры',
+        icon: 'laptop',
+      },
+      {
+        title: 'Телевизоры и цифровое ТВ',
+        icon: 'tv',
+      },
+      {
+        title: 'Аудиотехника',
+        icon: 'audio',
+      },
+      {
+        title: 'Акции',
+        icon: 'fire',
+      },
+      {
+        title: 'Новинки',
+        icon: 'new',
+      },
+    ],
+  };
+</script>
+
+<nav class="app-menu-desktop">
+  <ul class="app-menu-desktop__list">
+    <each loop="item in items">
+      <li class="app-menu-desktop__item">
+        <a href="#" class="app-menu-desktop__link">
+          <span class="app-menu-desktop__icon"><{{`x-icon-${item.icon}`}} /></span>
+          {{ item.title }}
+          <if condition="{{item.children}}">
+            <x-icon-arrow-right class="app-menu-desktop__arrow"></x-icon-arrow-right>
+          </if>
+        </a>
+        <if condition="item.children">
+          <div class="app-menu-desktop__children">
+            <x-app-submenu-desktop
+              title="{{item.title}}"
+              items="{{item.children}}"
+            ></x-app-submenu-desktop>
+          </div>
+        </if>
+      </li>
+    </each>
+  </ul>
+</nav>

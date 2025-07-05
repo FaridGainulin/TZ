@@ -1,0 +1,67 @@
+{
+  "name": "meccano",
+  "version": "2.0.0",
+  "license": "MIT",
+  "description": "frontend project builder",
+  "type": "module",
+  "config": {
+    "name": "Тестовое задание",
+    "port": 3000,
+    "purgeCssIgnore": [
+      "remodal",
+      "swiper"
+    ]
+  },
+  "scripts": {
+    "add": "plop --plopfile ./services/plopfile.js component",
+    "fonts": "node services/fonts",
+    "dev": "cross-env NODE_ENV=development gulp --silent",
+    "prod": "cross-env NODE_ENV=production gulp prod",
+    "serve": "gulp serve --silent"
+  },
+  "devDependencies": {
+    "chalk": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "del": "^7.1.0",
+    "figlet": "^1.7.0",
+    "fontmin": "^1.1.0",
+    "glob": "^10.4.2",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-filter": "^9.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-purgecss": "^6.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-stylus": "^3.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^6.0.0",
+    "handlebars": "^4.7.8",
+    "live-server": "^1.2.2",
+    "lodash": "^4.17.21",
+    "plop": "^4.0.1",
+    "posthtml-beautify": "^0.7.0",
+    "posthtml-component": "^1.1.1",
+    "posthtml-expressions": "^1.11.4",
+    "posthtml-replace": "^0.1.3",
+    "qrcode-terminal": "^0.12.0",
+    "read-pkg": "^9.0.1",
+    "rupture": "^0.7.1"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.7",
+    "jquery": "^3.6.0",
+    "jquery-query-object": "^2.2.3",
+    "jquery-validation": "^1.19.3",
+    "jquery.cookie": "^1.4.1",
+    "remodal": "^1.1.1",
+    "swiper": "^10.3.1"
+  }
+}

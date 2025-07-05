@@ -1,0 +1,74 @@
+<header class="app-header-mobile">
+  <div class="app-header-mobile__bar">
+    <x-ui-wrapper class="app-header-mobile__bar-wrapper">
+      <x-app-lang></x-app-lang>
+      <x-app-phone></x-app-phone>
+    </x-ui-wrapper>
+  </div>
+  <x-ui-wrapper>
+    <div class="app-header-mobile__row">
+      <div class="app-header-mobile__buttons">
+        <x-app-menu-button class="js-header-menu-mobile-button"></x-app-menu-button>
+        <x-ui-button primary="false" icon-only="true" outlined="true" aria-label="hunter">
+          <x-icon-hunter></x-icon-hunter>
+        </x-ui-button>
+      </div>
+      <a href="/">
+        <img src="/src/images/logo.svg" alt="logo" width="56" height="56" />
+      </a>
+      <div class="app-header-mobile__buttons">
+        <x-ui-button primary="false" icon-only="true" outlined="true" aria-label="like">
+          <x-icon-heart></x-icon-heart>
+        </x-ui-button>
+        <x-ui-button primary="false" icon-only="true" outlined="true" aria-label="chest">
+          <x-icon-chest></x-icon-chest>
+        </x-ui-button>
+      </div>
+    </div>
+  </x-ui-wrapper>
+  <x-ui-wrapper>
+    <x-app-search></x-app-search>
+  </x-ui-wrapper>
+  <div class="app-header-mobile__dropdown js-header-menu-mobile-dropdown">
+    <x-ui-wrapper>
+      <div class="app-header-mobile__main">
+        <div class="app-header-mobile__info">
+          <div class="app-header-mobile__location">
+            <x-app-location></x-app-location>
+            <x-app-work-time></x-app-work-time>
+          </div>
+          <div class="app-header-mobile__social">
+            <x-ui-button primary="false" icon-only="true">
+              <x-icon-telegram></x-icon-telegram>
+            </x-ui-button>
+            <x-ui-button primary="false" icon-only="true">
+              <x-icon-whatsapp></x-icon-whatsapp>
+            </x-ui-button>
+          </div>
+        </div>
+        <div class="app-header-mobile__menu">
+          <x-app-menu-mobile></x-app-menu-mobile>
+        </div>
+        <div class="app-header-mobile__action">
+          <x-ui-button primary="false" primary-hover="true">
+            <x-icon-add></x-icon-add>
+            Собрать компьютер
+          </x-ui-button>
+        </div>
+        <nav>
+          <ul class="app-header-mobile__links">
+            <li>
+              <a href="#" class="app-header-mobile__link">Доставка</a>
+            </li>
+            <li>
+              <a href="#" class="app-header-mobile__link">Оплата</a>
+            </li>
+            <li>
+              <a href="#" class="app-header-mobile__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </x-ui-wrapper>
+  </div>
+</header>

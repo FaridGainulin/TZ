@@ -1,0 +1,30 @@
+<script props>
+  module.exports = {
+    title: props.title || '',
+    items: props.items || [],
+  };
+</script>
+
+<div class="app-submenu-desktop">
+  <h2 class="app-submenu-desktop__title">{{title}}</h2>
+  <ul class="app-submenu-desktop__list">
+    <each loop="item in items">
+      <li class="app-submenu-desktop__item">
+        <a href="#" class="app-submenu-desktop__link">
+          <span>{{item.title}} <span class="app-submenu-desktop__count">{{item.count}}</span></span>
+          <if condition="{{item.children}}">
+            <x-icon-arrow-right class="app-submenu-desktop__arrow"></x-icon-arrow-right>
+          </if>
+        </a>
+        <if condition="item.children">
+          <div class="app-submenu-desktop__children">
+            <x-app-submenu-desktop
+              title="{{item.title}}"
+              items="{{item.children}}"
+            ></x-app-submenu-desktop>
+          </div>
+        </if>
+      </li>
+    </each>
+  </ul>
+</div>

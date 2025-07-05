@@ -1,0 +1,43 @@
+.app-submenu-desktop
+  position relative
+  width 277px
+  height 100%
+
+  &__title
+    font-family $primary-font-family
+    margin-bottom 8px
+    padding 0 40px
+    height 64px
+
+  &__list
+    list-style none
+    display flex
+    flex-direction column
+
+  &__item
+    font-size 16px
+
+  &__item:hover &__children
+    opacity 1
+    visibility visible
+    transform translateX(0)
+
+  &__link
+    padding 12px 40px
+    display flex
+    align-items center
+    justify-content space-between
+
+  &__count
+    color #999C9F
+
+  &__children
+    height 100%
+    position absolute
+    left 100%
+    top 0
+    opacity 0
+    transform translateX(-10%)
+    visibility hidden
+    transition all $transition-time
+    transition-delay 0.1s

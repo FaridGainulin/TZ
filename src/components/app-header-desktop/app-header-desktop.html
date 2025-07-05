@@ -1,0 +1,101 @@
+<header class="app-header-desktop">
+  <div class="app-header-desktop__bar">
+    <x-ui-wrapper class="app-header-desktop__bar-wrapper">
+      <div class="app-header-desktop__info">
+        <x-app-location></x-app-location>
+        <x-app-phone></x-app-phone>
+      </div>
+      <x-app-work-time></x-app-work-time>
+      <nav>
+        <ul class="app-header-desktop__links">
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Оплата</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </x-ui-wrapper>
+  </div>
+  <x-ui-wrapper class="app-header-desktop__wrapper">
+    <a href="/" class="app-header-desktop__logo">
+      <img src="/src/images/logo.svg" alt="logo" width="80" height="80" />
+    </a>
+    <div class="app-header-desktop__container">
+      <div class="app-header-desktop__dropdown js-header-menu-desktop-dropdown">
+        <x-app-menu-desktop></x-app-menu-desktop>
+      </div>
+      <div class="app-header-desktop__row">
+        <div class="app-header-desktop__navigate">
+          <x-app-menu-button class="js-header-menu-desktop-button"></x-app-menu-button>
+          <div class="app-header-desktop__search">
+            <x-app-search></x-app-search>
+          </div>
+          <div class="app-header-desktop__social">
+            <x-ui-button primary="false" icon-only="true" aria-label="telegram">
+              <x-icon-telegram></x-icon-telegram>
+            </x-ui-button>
+            <x-ui-button primary="false" icon-only="true" aria-label="whatsapp">
+              <x-icon-whatsapp></x-icon-whatsapp>
+            </x-ui-button>
+          </div>
+        </div>
+        <div class="app-header-desktop__lang">
+          <x-app-lang></x-app-lang>
+        </div>
+        <div class="app-header-desktop__additional">
+          <x-ui-button primary="false" icon-only="true" outlined="true" aria-label="like">
+            <x-icon-heart></x-icon-heart>
+          </x-ui-button>
+          <x-ui-button primary="false" icon-only="true" outlined="true" aria-label="hunter">
+            <x-icon-hunter></x-icon-hunter>
+          </x-ui-button>
+          <x-ui-button primary="false" icon-only="true" outlined="true" aria-label="chest">
+            <x-icon-chest></x-icon-chest>
+          </x-ui-button>
+        </div>
+      </div>
+      <nav class="app-header-desktop__row">
+        <ul class="app-header-desktop__menu">
+          <li>
+            <x-ui-button primary="false">
+              <x-icon-fire></x-icon-fire>
+              Акции
+            </x-ui-button>
+          </li>
+          <li>
+            <x-ui-button primary="false">
+              <x-icon-shtorm></x-icon-shtorm>
+              Горячее предложение
+            </x-ui-button>
+          </li>
+          <li>
+            <x-ui-button primary="false"> Подарочные наборы </x-ui-button>
+          </li>
+          <li>
+            <x-ui-button primary="false">
+              <x-icon-quest></x-icon-quest>
+              События
+            </x-ui-button>
+          </li>
+          <li>
+            <x-ui-button primary="false">
+              <x-icon-ork></x-icon-ork>
+              Наши бренды
+            </x-ui-button>
+          </li>
+        </ul>
+        <div class="app-header-desktop__action">
+          <x-ui-button primary="false" primary-hover="true">
+            <x-icon-add></x-icon-add>
+            Собрать компьютер
+          </x-ui-button>
+        </div>
+      </nav>
+    </div>
+  </x-ui-wrapper>
+</header>

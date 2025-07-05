@@ -1,0 +1,22 @@
+<push name="scripts">
+  <script src="/src/scripts/scripts.js"></script>
+</push>
+
+<push name="styles">
+  <link rel="stylesheet" href="/src/styles/reset.styl" />
+  <link rel="stylesheet" href="/src/styles/main.styl" />
+</push>
+
+<push name="meta">
+  <title>{{ $name }}</title>
+  <meta name="description" content="Тестовое задание" />
+</push>
+
+<x-ui-page-layout>
+  <fill:header>
+    <x-app-header-desktop></x-app-header-desktop>
+    <x-app-header-mobile></x-app-header-mobile>
+  </fill:header>
+
+  <x-app-section-main></x-app-section-main>
+</x-ui-page-layout>

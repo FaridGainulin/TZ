@@ -1,6 +1,12 @@
 .ui-wrapper
   padding-left 16px
   padding-right 16px
-  max-width 1392px
+  max-width 350px
   width 100%
   margin auto
+  +above($breakpoints.sm)
+    max-width 800px
+  +above($breakpoints.md)
+    max-width 1100px
+  +above($breakpoints.lg)
+    max-width 1392px

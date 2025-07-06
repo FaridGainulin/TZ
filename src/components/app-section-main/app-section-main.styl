@@ -34,6 +34,20 @@
       font-size 18px
       line-height 24px
 
+  &__text
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    +above($breakpoints.lg)
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      overflow: visible;
+      text-overflow: unset;
+
   &__button
     .ui-button
       padding 16px 40px
